@@ -10,3 +10,19 @@ function getData() {
         success : handleData
     })
 }
+
+```javascript
+function getData() {
+    return $.ajax({
+        url : 'example.com',
+        type: 'GET'
+    });
+}
+
+function handleData(data /* , textStatus, jqXHR */ ) {
+    alert(data);
+    //do some stuff
+}
+
+getData().done(handleData);
+````
